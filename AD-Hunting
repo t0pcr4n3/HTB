@@ -1,0 +1,1 @@
+Get all group user is in = [ (GET-ADUSER –Identity USERNAME –Properties MemberOf | Select-Object MemberOf).MemberOf ]
