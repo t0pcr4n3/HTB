@@ -1,1 +1,2 @@
 Get all group user is in = [ (GET-ADUSER –Identity USERNAME –Properties MemberOf | Select-Object MemberOf).MemberOf ]
+Obtain the password policy <ldapsearch-ad.py> = [ python3 ldapsearch-ad.py -l 10.129.1.207 -d DN -u First.LastName -p PASSWD -t pass-pols ]
