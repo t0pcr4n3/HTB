@@ -1,3 +1,4 @@
 Get all group user is in = [ (GET-ADUSER –Identity USERNAME –Properties MemberOf | Select-Object MemberOf).MemberOf ]
 Obtain the password policy <ldapsearch-ad.py> = [ python3 ldapsearch-ad.py -l 10.129.1.207 -d DOMAIN -u First.LastName -p PASSWD -t pass-pols ]
   #-t is REQUEST_TYPE: info, whoami, search, search-large, trusts, pass-pols, show-admins, show-user, show-user-list, kerberoast, all
+Find the one user who has a useraccountcontrol attribute equivalent to 262656 = [  Get-ADUser -LDAPFilter '(userAccountControl:1.2.840.113556.1.4.803:=262656)' | select name ]
